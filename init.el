@@ -245,6 +245,24 @@
   (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy)
   (keymap-set vertico-map "RET" #'vertico-directory-enter))
 
+(use-package icomplete
+  :custom
+  (read-file-name-completion-ignore-case t)
+  (read-buffer-completion-ignore-case t)
+  (completion-ignore-case t)
+
+  (completion-category-defaults nil)
+  (completion-category-overrides
+   '((file (styles basic partial-completion))))
+
+  (completion-group t)
+  (completions-group-format
+        (concat
+         (propertize "    " 'face 'completions-group-separator)
+         (propertize " %s " 'face 'completions-group-title)
+         (propertize " " 'face 'completions-group-separator
+                     'display '(space :align-to right)))))
+
 ;; dired customization
 (setq dired-dwim-target t)
 (setq trash-directory "~/.trash")
@@ -258,24 +276,6 @@
   :ensure t
   :init
   (marginalia-mode))
-
-;;(use-package icomplete
-;;  :custom
-;;  (read-file-name-completion-ignore-case t)
-;;  (read-buffer-completion-ignore-case t)
-;;  (completion-ignore-case t)
-;;
-;;  (completion-category-defaults nil)
-;;  (completion-category-overrides
-;;   '((file (styles basic partial-completion))))
-;;
-;;  (completion-group t)
-;;  (completions-group-format
-;;        (concat
-;;         (propertize "    " 'face 'completions-group-separator)
-;;         (propertize " %s " 'face 'completions-group-title)
-;;         (propertize " " 'face 'completions-group-separator
-;;                     'display '(space :align-to right)))))
 
 (use-package orderless
   :demand t
