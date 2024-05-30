@@ -184,7 +184,9 @@
   (setq enable-recursive-minibuffers t))
 
 (use-package yasnippet
-  :ensure t)
+  :ensure t
+  :init
+  (yas-global-mode 1))
 
 (use-package magit
   :ensure t)
