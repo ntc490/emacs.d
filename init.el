@@ -244,6 +244,11 @@
 
 (use-package multiple-cursors
   :ensure t)
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode))
+
 ;;(use-package icomplete
 ;;  :custom
 ;;  (read-file-name-completion-ignore-case t)
