@@ -195,6 +195,19 @@
 (use-package swiper
   :ensure t)
 
+(use-package avy
+  :ensure t)
+
+(use-package key-chord
+   :ensure t
+   :config
+   (key-chord-mode 1)
+   (key-chord-define-global "jl" 'avy-goto-line)
+   (key-chord-define-global "jk" 'avy-goto-char)
+   (defvar key-chord-tips
+     '("Press <jl> quickly to jump to a visible line."
+       "Press <jk> quickly to jump to a visible character.")))
+
 ;;(use-package savehist
 ;;  :demand t
 ;;  :config
