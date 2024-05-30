@@ -12,6 +12,10 @@
 (put 'eval-expression 'disabled nil)
 (put 'erase-buffer 'disabled nil)
 
+;; --------------- Theme ---------------
+
+(load-theme 'wombat t)
+
 ;; Resizing the Emacs frame can be a terribly expensive part of changing the
 ;; font. By inhibiting this, we easily halve startup times with fonts that are
 ;; larger than the system default.
