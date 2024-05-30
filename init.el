@@ -239,7 +239,8 @@
   (vertico-resize t)
   (vertico-cycle t)
   :config
-  (vertico-mode))
+  (vertico-mode)
+  (keymap-set vertico-map "RET" #'vertico-directory-enter))
 
 (use-package multiple-cursors
   :ensure t)
