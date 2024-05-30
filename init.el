@@ -11,6 +11,7 @@
 (put 'narrow-to-region 'disabled nil)
 (put 'eval-expression 'disabled nil)
 (put 'erase-buffer 'disabled nil)
+(save-place-mode 1)
 
 (setq-default show-trailing-whitespace nil)
 (setq read-buffer-completion-ignore-case t)
