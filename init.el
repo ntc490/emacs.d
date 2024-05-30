@@ -182,6 +182,9 @@
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t))
 
+(use-package yasnippet
+  :ensure t)
+
 (use-package magit
   :ensure t
   :straight t
