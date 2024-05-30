@@ -347,6 +347,31 @@
 ;;  (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode))
 
+(defun my-c-mode-common-hook ()
+  (c-set-style "BSD")
+  (whitespace-set-indention-to-spaces)
+  (setq fill-column 80))
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+(use-package c-ts-mode
+    :ensure nil ;; emacs built-in
+    :preface
+    (defun my--c-ts-indent-style()
+        "Override the built-in BSD indentation style with some additional rules.
+         Docs: https://www.gnu.org/software/emacs/manual/html_node/elisp/Parser_002dbased-Indentation.html
+         Notes: `treesit-explore-mode' can be very useful to see where you're at in the tree-sitter tree,
+                especially paired with `(setq treesit--indent-verbose t)' to debug what rules is being
+                applied at a given point."
+        `(;; do not indent preprocessor statements
+          ((node-is "preproc") column-0 0)
+          ;; do not indent namespace children
+          ((n-p-gp nil nil "namespace_definition") grand-parent 0)
+          ;; append to bsd style
+          ,@(alist-get 'bsd (c-ts-mode--indent-styles 'cpp))))
+    :config
+    (setq c-ts-mode-indent-offset 4)
+    (setq c-ts-mode-indent-style #'my--c-ts-indent-style))
+
 ;; (use-package consult-projectile
 ;;   :after consult projectile
 ;;   :demand t
