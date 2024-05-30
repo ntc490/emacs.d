@@ -241,6 +241,8 @@
   :config
   (vertico-mode))
 
+(use-package multiple-cursors
+  :ensure t)
 ;;(use-package icomplete
 ;;  :custom
 ;;  (read-file-name-completion-ignore-case t)
