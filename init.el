@@ -311,6 +311,9 @@
   (consult-project-root-function #'projectile-project-root)
   (consult-narrow-key "<"))
 
+(setq custom-file (locate-user-emacs-file "custom-vars.el"))
+(load custom-file 'noerror 'nomessage)
+
 ;; (use-package consult-projectile
 ;;   :after consult projectile
 ;;   :demand t
