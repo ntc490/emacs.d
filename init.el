@@ -245,23 +245,23 @@
           without-if-bang)))
 
 (use-package consult
-  (leader-def
-    "ff" 'find-file
-    "fr" 'consult-recent-file
-    "bb" 'consult-buffer
-    "tc" 'consult-theme
-    "/"  'consult-ripgrep
-    "g/" 'consult-git-grep)
+;;  (leader-def
+;;    "ff" 'find-file
+;;    "fr" 'consult-recent-file
+;;    "bb" 'consult-buffer
+;;    "tc" 'consult-theme
+;;    "/"  'consult-ripgrep
+;;    "g/" 'consult-git-grep)
   :custom
   (consult-project-root-function #'projectile-project-root)
   (consult-narrow-key "<"))
 
-(use-package consult-projectile
-  :after consult projectile
-  :demand t
-  :straight (consult-projectile :type git :host gitlab :repo "OlMon/consult-projectile" :branch "master")
-  (leader-def
-    "pp" 'consult-projectile))
+;; (use-package consult-projectile
+;;   :after consult projectile
+;;   :demand t
+;;   :straight (consult-projectile :type git :host gitlab :repo "OlMon/consult-projectile" :branch "master")
+;;   (leader-def
+;;     "pp" 'consult-projectile))
 
 ;; (use-package consult-lsp
 ;;   :straight (consult-lsp :type git :host github :repo "gagbo/consult-lsp" :protocol ssh)
@@ -283,13 +283,13 @@
   :config
   (remove-hook 'vterm-mode-hook 'vterm))
 
-(use-package multi-vterm
-  :commands
-  multi-vterm
-  multi-vterm-next
-  multi-vterm-prev
-  multi-vterm-dedicated-toggle
-  multi-vterm-project)
-(leader-def "pt" 'multi-vterm-dedicated-toggle)
+;; (use-package multi-vterm
+;;   :commands
+;;   multi-vterm
+;;   multi-vterm-next
+;;   multi-vterm-prev
+;;   multi-vterm-dedicated-toggle
+;;   multi-vterm-project)
+;; (leader-def "pt" 'multi-vterm-dedicated-toggle)
 
 (use-package pcmpl-args)
