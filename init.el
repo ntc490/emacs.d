@@ -16,6 +16,26 @@
 
 (load-theme 'wombat t)
 
+;; --------------- Generic key binding ---------------
+
+(global-set-key "\M-g"   'goto-line)
+(global-set-key "\M-r"   'revert-buffer)
+;;(global-set-key "\M-o"   'tags-search)
+;;(global-set-key [f7]     'previous-error)
+;;(global-set-key [f8]     'next-error)
+(global-set-key "\C-ce"  'ediff-buffers)
+(global-set-key "\C-c "  'cc-find-other-file)
+(global-set-key "\C-ca"  'cc-append-to-line)
+(global-set-key "\C-cc"  'cc-chomp-lines)
+;;(global-set-key "\C-cr"  'cc-chomp-lines-regexp)
+(global-set-key "\M-*"   'rtags-location-stack-back)
+(global-set-key "\M-@"   'er/expand-region)
+(global-set-key "\M-#"   'mc/mark-next-like-this)
+(global-set-key (kbd "M-C-c") 'mc/edit-lines)
+(global-set-key "\M-n"   'next-error)
+(global-set-key "\M-p"   'previous-error)
+
+(global-set-key "\M-."   'rtags-find-symbol-at-point)
 ;; Resizing the Emacs frame can be a terribly expensive part of changing the
 ;; font. By inhibiting this, we easily halve startup times with fonts that are
 ;; larger than the system default.
