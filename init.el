@@ -12,6 +12,15 @@
 (put 'eval-expression 'disabled nil)
 (put 'erase-buffer 'disabled nil)
 
+(setq-default show-trailing-whitespace nil)
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
+;;(setq backup-inhibited t)
+(column-number-mode 'true)
+(setq compile-command "make -j")
+(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-by-copying t)
+
 ;; --------------- Theme ---------------
 
 (load-theme 'wombat t)
