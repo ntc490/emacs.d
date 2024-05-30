@@ -182,10 +182,10 @@
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t))
 
-(use-package savehist
-  :demand t
-  :config
-  (savehist-mode))
+;;(use-package savehist
+;;  :demand t
+;;  :config
+;;  (savehist-mode))
 
 (use-package vertico
   :demand t
