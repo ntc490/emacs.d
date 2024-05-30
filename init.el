@@ -191,8 +191,17 @@
 (use-package magit
   :ensure t)
 
-(use-package projectile
+(use-package fancy-compilation
   :ensure t)
+
+(with-eval-after-load 'compile
+  (fancy-compilation-mode))
+
+;;(setq projectile-command-map (kbd "C-c p"))
+(put 'projectile-project-compilation-cmd 'safe-local-variable #'stringp)
+(use-package projectile
+  :ensure t
+  :bind-keymap ("C-c p" . projectile-command-map))
 
 (use-package swiper
   :ensure t)
