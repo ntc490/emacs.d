@@ -208,6 +208,9 @@
      '("Press <jl> quickly to jump to a visible line."
        "Press <jk> quickly to jump to a visible character.")))
 
+(use-package rtags
+  :ensure t)
+
 ;;(use-package savehist
 ;;  :demand t
 ;;  :config
