@@ -330,6 +330,16 @@
 (setq custom-file (locate-user-emacs-file "custom-vars.el"))
 (load custom-file 'noerror 'nomessage)
 
+;; Manually installing v0.21.0 of the treesit grammars for emacs
+;; version 29.3
+(use-package treesit-auto
+  :demand t
+;;  :custom
+;;  (treesit-auto-install 'prompt)
+  :config
+;;  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode))
+
 ;; (use-package consult-projectile
 ;;   :after consult projectile
 ;;   :demand t
