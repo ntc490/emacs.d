@@ -241,9 +241,6 @@
 (use-package rtags
   :ensure t)
 
-(use-package smart-tabs-mode
-  :ensure t)
-
 (use-package expand-region
   :ensure t)
 
