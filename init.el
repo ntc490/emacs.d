@@ -242,6 +242,7 @@
   (vertico-cycle t)
   :config
   (vertico-mode)
+  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy)
   (keymap-set vertico-map "RET" #'vertico-directory-enter))
 
 ;; dired customization
