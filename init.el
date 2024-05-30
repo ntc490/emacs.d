@@ -188,6 +188,10 @@
 
 (use-package magit
   :ensure t)
+
+(use-package projectile
+  :ensure t)
+
 (use-package swiper
   :ensure t)
 
