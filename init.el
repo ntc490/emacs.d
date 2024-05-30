@@ -244,6 +244,13 @@
   (vertico-mode)
   (keymap-set vertico-map "RET" #'vertico-directory-enter))
 
+;; dired customization
+(setq dired-dwim-target t)
+(setq trash-directory "~/.trash")
+(setq delete-by-moving-to-trash t)
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
+(setq global-auto-revert-non-file-buffers t)
+
 (use-package multiple-cursors
   :ensure t)
 (use-package marginalia
