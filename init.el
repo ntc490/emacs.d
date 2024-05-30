@@ -49,7 +49,13 @@
 
 (global-set-key "\M-."   'rtags-find-symbol-at-point)
 
-;; --------------- End of key bindings ---------------
+;; --------------- Personal Emacs Extensions ---------------
+
+(add-to-list 'load-path (expand-file-name "programming" "~/.emacs.d/personal"))
+(require 'code-constructor)
+(require 'white-space)
+
+;; --------------- General Setup ---------------
 
 ;; Resizing the Emacs frame can be a terribly expensive part of changing the
 ;; font. By inhibiting this, we easily halve startup times with fonts that are
@@ -211,6 +217,7 @@
 (use-package avy
   :ensure t)
 
+;; TODO: this isn't triggering at starup. config -> init?
 (use-package key-chord
    :ensure t
    :config
