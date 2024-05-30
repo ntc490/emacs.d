@@ -228,10 +228,10 @@
 (use-package expand-region
   :ensure t)
 
-;;(use-package savehist
-;;  :demand t
-;;  :config
-;;  (savehist-mode))
+(use-package savehist
+  :demand t
+  :config
+  (savehist-mode))
 
 (use-package vertico
   :demand t
