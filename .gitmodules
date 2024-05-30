@@ -1,0 +1,4 @@
+[submodule "yasnippet-snippets"]
+	path = yasnippet-snippets
+	url = https://github.com/ntc490/yasnippet-snippets.git
+	branch = ntc490
