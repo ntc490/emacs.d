@@ -45,6 +45,9 @@
 (global-set-key "\M-p"   'previous-error)
 
 (global-set-key "\M-."   'rtags-find-symbol-at-point)
+
+;; --------------- End of key bindings ---------------
+
 ;; Resizing the Emacs frame can be a terribly expensive part of changing the
 ;; font. By inhibiting this, we easily halve startup times with fonts that are
 ;; larger than the system default.
