@@ -43,6 +43,7 @@
 (global-set-key (kbd "M-C-c") 'mc/edit-lines)
 (global-set-key "\M-n"   'next-error)
 (global-set-key "\M-p"   'previous-error)
+(global-set-key "\C-s"   'swiper)
 
 (global-set-key "\M-."   'rtags-find-symbol-at-point)
 
@@ -189,6 +190,8 @@
   :ensure t
   :straight t
   )
+(use-package swiper
+  :ensure t)
 
 ;;(use-package savehist
 ;;  :demand t
