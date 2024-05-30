@@ -182,6 +182,11 @@
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t))
 
+(use-package magit
+  :ensure t
+  :straight t
+  )
+
 ;;(use-package savehist
 ;;  :demand t
 ;;  :config
