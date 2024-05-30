@@ -3,6 +3,15 @@
 
 (setq package-enable-at-startup nil)
 
+;; --------------- Power User Stuff ---------------
+
+(setq inhibit-startup-message t)
+(put 'set-goal-column 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+(put 'eval-expression 'disabled nil)
+(put 'erase-buffer 'disabled nil)
+
 ;; Resizing the Emacs frame can be a terribly expensive part of changing the
 ;; font. By inhibiting this, we easily halve startup times with fonts that are
 ;; larger than the system default.
