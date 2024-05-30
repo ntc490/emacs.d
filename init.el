@@ -187,9 +187,7 @@
   :ensure t)
 
 (use-package magit
-  :ensure t
-  :straight t
-  )
+  :ensure t)
 (use-package swiper
   :ensure t)
 
