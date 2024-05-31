@@ -347,6 +347,9 @@
 ;;  (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode))
 
+(use-package clang-format
+  :ensure t)
+
 (defun my-c-mode-common-hook ()
   (c-set-style "BSD")
   (whitespace-set-indention-to-spaces)
