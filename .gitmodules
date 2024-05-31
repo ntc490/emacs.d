@@ -2,3 +2,6 @@
 	path = yasnippet-snippets
 	url = https://github.com/ntc490/yasnippet-snippets.git
 	branch = ntc490
+[submodule "tree-sitter-sources"]
+	path = tree-sitter-sources
+	url = https://github.com/ntc490/tree-sitter-sources
