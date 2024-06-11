@@ -357,6 +357,9 @@
 (use-package clang-format
   :ensure t)
 
+(use-package cmake-mode
+  :ensure t)
+
 (defun my-c-mode-common-hook ()
   (c-set-style "BSD")
   (smartparens-mode 1)
