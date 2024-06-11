@@ -215,6 +215,9 @@
 (with-eval-after-load 'compile
   (fancy-compilation-mode))
 
+(use-package ag
+  :ensure t)
+
 ;;(setq projectile-command-map (kbd "C-c p"))
 (put 'projectile-project-compilation-cmd 'safe-local-variable #'stringp)
 (use-package projectile
