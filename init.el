@@ -244,6 +244,10 @@
 (use-package expand-region
   :ensure t)
 
+;; Balance parens while typing code
+(use-package smartparens
+  :ensure t)
+
 (use-package savehist
   :demand t
   :config
@@ -352,9 +356,22 @@
 
 (defun my-c-mode-common-hook ()
   (c-set-style "BSD")
+  (smartparens-mode 1)
   (whitespace-set-indention-to-spaces)
   (setq fill-column 80))
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+(defun my-c++-mode-hook ()
+  (smartparens-mode 1))
+(add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
+(defun my-c++-ts-mode-hook ()
+  (smartparens-mode 1))
+(add-hook 'c++-ts-mode-hook 'my-c++-ts-mode-hook)
+
+(defun my-c-mode-hook ()
+  (smartparens-mode 1))
+(add-hook 'c-mode-hook 'my-c-mode-hook)
 
 (use-package c-ts-mode
     :ensure nil ;; emacs built-in
