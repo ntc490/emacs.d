@@ -233,7 +233,7 @@
 ;; TODO: this isn't triggering at starup. config -> init?
 (use-package key-chord
    :ensure t
-   :config
+   :init
    (key-chord-mode 1)
    (key-chord-define-global "jl" 'avy-goto-line)
    (key-chord-define-global "jk" 'avy-goto-char)
