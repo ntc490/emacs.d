@@ -251,6 +251,9 @@
 (use-package smartparens
   :ensure t)
 
+(use-package smart-compile
+  :ensure t)
+
 (use-package savehist
   :demand t
   :config
