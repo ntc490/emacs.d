@@ -245,6 +245,11 @@
 (use-package rtags
   :ensure t)
 
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode 1))
+
 (use-package ace-window
   :ensure t
   :config
