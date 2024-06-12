@@ -34,6 +34,7 @@
 ;;(global-set-key "\M-o"   'tags-search)
 ;;(global-set-key [f7]     'previous-error)
 ;;(global-set-key [f8]     'next-error)
+(global-set-key "\M-o"   'ace-window)
 (global-set-key "\C-ce"  'ediff-buffers)
 (global-set-key "\C-c "  'cc-find-other-file)
 (global-set-key "\C-ca"  'cc-append-to-line)
@@ -243,6 +244,11 @@
 
 (use-package rtags
   :ensure t)
+
+(use-package ace-window
+  :ensure t
+  :config
+  (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
 (use-package expand-region
   :ensure t)
