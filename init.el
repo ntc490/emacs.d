@@ -202,6 +202,11 @@
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t))
 
+(use-package use-package-chords
+  :ensure t
+  :demand t
+  :init (key-chord-mode 1))
+
 (use-package yasnippet
   :ensure t
   :init
@@ -229,18 +234,9 @@
   :ensure t)
 
 (use-package avy
-  :ensure t)
-
-;; TODO: this isn't triggering at starup. config -> init?
-(use-package key-chord
-   :ensure t
-   :init
-   (key-chord-mode 1)
-   (key-chord-define-global "jl" 'avy-goto-line)
-   (key-chord-define-global "jk" 'avy-goto-char)
-   (defvar key-chord-tips
-     '("Press <jl> quickly to jump to a visible line."
-       "Press <jk> quickly to jump to a visible character.")))
+  :ensure t
+  :chords (("jl" . avy-goto-line)
+	   ("jk" . avy-goto-char)))
 
 (use-package rtags
   :ensure t)
