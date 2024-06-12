@@ -40,15 +40,12 @@
 (global-set-key "\C-ca"  'cc-append-to-line)
 (global-set-key "\C-cc"  'cc-chomp-lines)
 ;;(global-set-key "\C-cr"  'cc-chomp-lines-regexp)
-(global-set-key "\M-*"   'rtags-location-stack-back)
 (global-set-key "\M-@"   'er/expand-region)
 (global-set-key "\M-#"   'mc/mark-next-like-this)
 (global-set-key (kbd "M-C-c") 'mc/edit-lines)
 (global-set-key "\M-n"   'next-error)
 (global-set-key "\M-p"   'previous-error)
 (global-set-key "\C-s"   'swiper)
-
-(global-set-key "\M-."   'rtags-find-symbol-at-point)
 
 ;; --------------- Personal Emacs Extensions ---------------
 
@@ -239,7 +236,19 @@
 	   ("jk" . avy-goto-char)))
 
 (use-package rtags
-  :ensure t)
+  :ensure t
+  :demand t
+  :bind (("M-." . rtags-find-symbol-at-point)
+	 ("M-," . rtags-find-references)
+	 ("M-*" . rtags-location-stack-back))
+  :config (setq rtags-completions-enabled t
+		rtags-path "/home/ncrapo/.local/bin"
+		;;rtags-rc-binary-name "/home/manoj/.emacs.d/rtags/bin/rc"
+		;;rtags-rdm-binary-name "/home/manoj/.emacs.d/rtags/bin/rdm")
+		)
+  :hook (c++-ts-mode . rtags-start-process-unless-running)
+  :init
+  (rtags-enable-standard-keybindings global-map))
 
 (use-package which-key
   :ensure t
