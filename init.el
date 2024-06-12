@@ -250,6 +250,10 @@
   :init
   (which-key-mode 1))
 
+;;; Don't need since we have ace-window for transposing windows
+;;(use-package crux
+;;  :ensure t)
+
 (use-package ace-window
   :ensure t
   :config
