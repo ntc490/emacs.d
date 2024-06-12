@@ -275,6 +275,7 @@
   (savehist-mode))
 
 (use-package vertico
+  :ensure t
   :demand t
   :custom
   (vertico-resize t)
@@ -285,6 +286,7 @@
   (keymap-set vertico-map "RET" #'vertico-directory-enter))
 
 (use-package icomplete
+  :ensure t
   :custom
   (read-file-name-completion-ignore-case t)
   (read-buffer-completion-ignore-case t)
@@ -317,6 +319,7 @@
   (marginalia-mode))
 
 (use-package orderless
+  :ensure t
   :demand t
   :custom
   (completion-styles '(orderless))
@@ -348,6 +351,7 @@
           without-if-bang)))
 
 (use-package consult
+  :ensure t
 ;;  (leader-def
 ;;    "ff" 'find-file
 ;;    "fr" 'consult-recent-file
@@ -365,6 +369,7 @@
 ;; Manually installing v0.21.0 of the treesit grammars for emacs
 ;; version 29.3
 (use-package treesit-auto
+  :ensure t
   :demand t
 ;;  :custom
 ;;  (treesit-auto-install 'prompt)
@@ -429,12 +434,14 @@
 ;;   :config (define-key lsp-mode-map [remap xref-find-apropos] #'consult-lsp-symbols))
 
 (use-package eterm-256color
+  :ensure t
   :hook (term-mode . eterm-256color-mode))
 
 (defun me/disable-global-hl-line-mode ()
   (global-hl-line-mode -1))
 
 (use-package vterm
+  :ensure nil ;; built-in
   :straight nil
   :commands vterm vterm-other-window
   :hook (vterm-mode . #'me/disable-global-hl-line-mode)
@@ -451,5 +458,3 @@
 ;;   multi-vterm-dedicated-toggle
 ;;   multi-vterm-project)
 ;; (leader-def "pt" 'multi-vterm-dedicated-toggle)
-
-(use-package pcmpl-args)
