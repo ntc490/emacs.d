@@ -4,6 +4,8 @@
   - [X] figure out key bindings and chording in use-package
   - [X] convert all key bindings to use-package directives
   - [ ] put emacs config in an org file and add documentation?
+  - [ ] rebind drag-stuff to a repeating command with longer combo
+  - [ ] rebind crux-kill-whole-line "close" to drag-stuff
 - [-] Package setup or research
   - [ ] undo-tree
   - [X] move-text/move-dup/drag stuff

@@ -268,8 +268,14 @@
   :init
   (which-key-mode 1))
 
+;; Other potentially useful commands:
+;;  - crux-duplicate-current-line-or-region
 (use-package crux
-  :disabled
+  :bind (("C-c r" . crux-rename-file-and-buffer)
+	 ("C-k" . crux-smart-kill-line)
+	 ("C-c i" . crux-find-user-init-file)
+	 ("C-c s" . crux-sudo-edit)
+	 ("C-c d" . crux-insert-date))
   :ensure t)
 
 (use-package drag-stuff
