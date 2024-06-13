@@ -236,6 +236,7 @@
 	   ("jk" . avy-goto-char)))
 
 (use-package rtags
+  :disabled
   :ensure t
   :demand t
   :bind (("M-." . rtags-find-symbol-at-point)
@@ -249,6 +250,25 @@
   :hook (c++-ts-mode . rtags-start-process-unless-running)
   :init
   (rtags-enable-standard-keybindings global-map))
+
+(use-package lsp-mode
+  :ensure t
+  :config
+  (setq lsp-headerline-breadcrumb-enable nil)
+  (setq lsp-idle-delay 0.1))
+
+(use-package company
+  :ensure t
+  :bind (("C-c /" . company-complete))
+  :config
+  (setq company-idle-delay nil
+	company-minimum-prefix-length 2))
+
+(use-package flycheck
+  :ensure t
+  :bind (("C-c f" . flycheck-list-errors))
+  :init
+  (global-flycheck-mode 1))
 
 (use-package which-key
   :ensure t
