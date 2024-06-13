@@ -268,6 +268,12 @@
   :init
   (which-key-mode 1))
 
+(use-package undo-tree
+  :chords (("uu" . undo-tree-visualize))
+  :init
+  (global-undo-tree-mode)
+  :ensure t)
+
 ;; Other potentially useful commands:
 ;;  - crux-duplicate-current-line-or-region
 (use-package crux

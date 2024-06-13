@@ -7,7 +7,7 @@
   - [ ] rebind drag-stuff to a repeating command with longer combo
   - [ ] rebind crux-kill-whole-line "close" to drag-stuff
 - [-] Package setup or research
-  - [ ] undo-tree
+  - [X] undo-tree
   - [X] move-text/move-dup/drag stuff
   - [ ] what is the emacs module?
   - [ ] prescient
