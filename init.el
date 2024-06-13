@@ -29,23 +29,16 @@
 
 ;; --------------- Generic key binding ---------------
 
-(global-set-key "\M-g"   'goto-line)
+(global-set-key "\M-g"   'goto-line-with-feedback)
 (global-set-key "\M-r"   'revert-buffer)
-;;(global-set-key "\M-o"   'tags-search)
-;;(global-set-key [f7]     'previous-error)
-;;(global-set-key [f8]     'next-error)
-(global-set-key "\M-o"   'ace-window)
 (global-set-key "\C-ce"  'ediff-buffers)
+(global-set-key "\M-@"   'er/expand-region)
+
+;; Code constructor module stuff - formalize some day
 (global-set-key "\C-c "  'cc-find-other-file)
 (global-set-key "\C-ca"  'cc-append-to-line)
 (global-set-key "\C-cc"  'cc-chomp-lines)
 ;;(global-set-key "\C-cr"  'cc-chomp-lines-regexp)
-(global-set-key "\M-@"   'er/expand-region)
-(global-set-key "\M-#"   'mc/mark-next-like-this)
-(global-set-key (kbd "M-C-c") 'mc/edit-lines)
-(global-set-key "\M-n"   'next-error)
-(global-set-key "\M-p"   'previous-error)
-(global-set-key "\C-s"   'swiper)
 
 ;; --------------- Personal Emacs Extensions ---------------
 
@@ -55,7 +48,6 @@
 
 ;; --------------- General Setup ---------------
 
-(global-set-key [remap goto-line] 'goto-line-with-feedback)
 (defun goto-line-with-feedback ()
   "Show line numbers temporarily, while prompting for the line number input"
   (interactive)
@@ -228,7 +220,8 @@
   :bind-keymap ("C-c p" . projectile-command-map))
 
 (use-package swiper
-  :ensure t)
+  :ensure t
+  :bind (("C-s" . swiper)))
 
 (use-package avy
   :ensure t
@@ -281,6 +274,7 @@
 
 (use-package ace-window
   :ensure t
+  :bind (("M-o" . ace-window))
   :config
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
@@ -337,7 +331,9 @@
 (setq global-auto-revert-non-file-buffers t)
 
 (use-package multiple-cursors
-  :ensure t)
+  :ensure t
+  :bind (("M-#" . mc/mark-next-like-this)))
+
 (use-package marginalia
   :ensure t
   :init

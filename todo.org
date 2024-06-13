@@ -2,7 +2,7 @@
   - [ ] remap C-M-\ to clang-format-region
   - [ ] remap C-c C-q to clang-format-region of defun (write custom method to do this)
   - [X] figure out key bindings and chording in use-package
-  - [ ] convert all key bindings to use-package directives
+  - [X] convert all key bindings to use-package directives
   - [ ] put emacs config in an org file and add documentation?
 - [-] Package setup or research
   - [ ] undo-tree
