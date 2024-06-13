@@ -1,0 +1,26 @@
+- Tasks
+  - [ ] remap C-M-\ to clang-format-region
+  - [ ] remap C-c C-q to clang-format-region of defun (write custom method to do this)
+  - [X] figure out key bindings and chording in use-package
+  - [ ] convert all key bindings to use-package directives
+  - [ ] put emacs config in an org file and add documentation?
+- [-] Package setup or research
+  - [ ] undo-tree
+  - [ ] move-text/move-dup/drag stuff
+  - [ ] what is the emacs module?
+  - [ ] prescient
+  - [ ] multi-compile
+  - [ ] use corfu for completions?
+  - [ ] irony-mode?
+  - [ ] zzz-to-char?
+  - [ ] ef-themes
+  - [X] which-key
+  - [X] ace-window
+  - [X] company-mode
+  - [X] bind \C-c r to rtags
+  - [X] make rtags work without a bunch of extra work outside of emacs
+  - [X] flycheck (flymake?)
+  - [X] smart-compile
+  - [X] eglot (decided against it for now. using lsp-mode instead.
+  - [X] auto-yasnippets - might be cool some day. Defines snippets on the fly.
+  - [X] crux - buffer and file rename is the only thing I use from there
