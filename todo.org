@@ -6,7 +6,7 @@
   - [ ] put emacs config in an org file and add documentation?
 - [-] Package setup or research
   - [ ] undo-tree
-  - [ ] move-text/move-dup/drag stuff
+  - [X] move-text/move-dup/drag stuff
   - [ ] what is the emacs module?
   - [ ] prescient
   - [ ] multi-compile

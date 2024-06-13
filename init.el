@@ -272,6 +272,15 @@
   :disabled
   :ensure t)
 
+(use-package drag-stuff
+  :ensure t
+  :bind (("M-<up>" . drag-stuff-up)
+	 ("M-<down>" . drag-stuff-down)
+	 ("M-<right>" . drag-stuff-right)
+	 ("M-<left>" . drag-stuff-left))
+  :init
+  (drag-stuff-global-mode 1))
+
 (use-package ace-window
   :ensure t
   :bind (("M-o" . ace-window))
