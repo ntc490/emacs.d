@@ -11,6 +11,7 @@
 - [-] Package setup or research
   - [X] undo-tree
   - [X] move-text/move-dup/drag stuff
+  - [ ] repeat-mode
   - [ ] what is the emacs module?
   - [X] prescient - for smarter sorting and filtering. can be combined with vertico.
   - [ ] multi-compile
