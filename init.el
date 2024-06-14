@@ -433,11 +433,12 @@
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 (defun my-c++-mode-hook ()
+  (lsp)
   (smartparens-mode 1))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 (defun my-c++-ts-mode-hook ()
-  (smartparens-mode 1))
+  (my-c++-mode-hook))
 (add-hook 'c++-ts-mode-hook 'my-c++-ts-mode-hook)
 
 (defun my-c-mode-hook ()
