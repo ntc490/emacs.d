@@ -11,7 +11,7 @@
   - [X] undo-tree
   - [X] move-text/move-dup/drag stuff
   - [ ] what is the emacs module?
-  - [ ] prescient
+  - [X] prescient - for smarter sorting and filtering. can be combined with vertico.
   - [ ] multi-compile
   - [ ] use corfu for completions?
   - [ ] irony-mode?
