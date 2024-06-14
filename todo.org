@@ -7,6 +7,7 @@
   - [ ] rebind drag-stuff to a repeating command with longer combo
   - [ ] rebind crux-kill-whole-line "close" to drag-stuff
   - [ ] bind ctrl-l to eat a token in vertico
+  - [ ] ensure projectile doesn't index build directories (compile_commands.json only)
 - [-] Package setup or research
   - [X] undo-tree
   - [X] move-text/move-dup/drag stuff
