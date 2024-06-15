@@ -214,6 +214,11 @@
   :init
   (yas-global-mode 1))
 
+(use-package powerline
+  :init
+  (powerline-default-theme)
+  :ensure t)
+
 (use-package magit
   :ensure t)
 
