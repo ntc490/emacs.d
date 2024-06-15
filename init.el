@@ -193,6 +193,13 @@
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t))
 
+(use-package repeat
+  :ensure t
+  :hook (after-init . repeat-mode)
+  :custom
+  (repeat-too-dangerous '(kill-this-buffer))
+  (repeat-exit-timeout 5))
+
 (use-package use-package-chords
   :ensure t
   :demand t
