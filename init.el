@@ -33,6 +33,8 @@
 (global-set-key "\M-r"   'revert-buffer)
 (global-set-key "\C-ce"  'ediff-buffers)
 (global-set-key "\M-@"   'er/expand-region)
+(global-set-key "\M-n"   'next-error)
+(global-set-key "\M-p"   'previous-error)
 
 ;; Code constructor module stuff - formalize some day
 (global-set-key "\C-c "  'cc-find-other-file)
