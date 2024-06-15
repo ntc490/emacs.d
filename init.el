@@ -200,6 +200,10 @@
   (repeat-too-dangerous '(kill-this-buffer))
   (repeat-exit-timeout 5))
 
+(use-package beacon
+  :init
+  (beacon-mode))
+
 (use-package use-package-chords
   :ensure t
   :demand t
