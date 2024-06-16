@@ -264,6 +264,7 @@
 
 (use-package lsp-mode
   :ensure t
+  :bind (("M-?" . lsp-find-references))
   :config
   (setq lsp-headerline-breadcrumb-enable nil)
   (setq lsp-idle-delay 0.1))
