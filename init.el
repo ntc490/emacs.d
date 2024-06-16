@@ -502,6 +502,9 @@
 (defun me/disable-global-hl-line-mode ()
   (global-hl-line-mode -1))
 
+(use-package dashboard
+  :ensure t)
+
 (use-package vterm
   :ensure nil ;; built-in
   :straight nil
