@@ -1,31 +1,66 @@
-- Tasks
+* Tasks
   - [ ] remap C-M-\ to clang-format-region
   - [ ] remap C-c C-q to clang-format-region of defun (write custom method to do this)
-  - [X] figure out key bindings and chording in use-package
-  - [X] convert all key bindings to use-package directives
   - [ ] put emacs config in an org file and add documentation?
   - [ ] rebind drag-stuff to a repeating command with longer combo
   - [ ] rebind crux-kill-whole-line "close" to drag-stuff
   - [ ] bind ctrl-l to eat a token in vertico
   - [ ] ensure projectile doesn't index build directories (compile_commands.json only)
-- [-] Package setup or research
-  - [X] undo-tree
-  - [X] move-text/move-dup/drag stuff
-  - [ ] repeat-mode
-  - [ ] what is the emacs module?
-  - [X] prescient - for smarter sorting and filtering. can be combined with vertico.
-  - [ ] multi-compile
-  - [ ] use corfu for completions?
-  - [ ] irony-mode?
-  - [ ] zzz-to-char?
+  - [ ] emacs instead of tmux?
+  - [ ] imenu
+  - [ ] repeat keys for
+    - page up/down
+    - drag mode stuff
+    -
+  - org mode
+    - next level button? fighting indention
+  - embed documentation in C/C++ code like we can embed code in org mode (plantuml or others)
+  - diagraming langage creates block diagrams and such in the code
+  - GUI emacs
+    - glorious space or whatever it's called
+    - launching other files types into a browser or whatever
+    - display graphics and things within editor
+    - render markdown inline
+    - render plantuml inline
+  - folding for C/C++
+  - foo
+  -
+  - [ ] bar
+  - [X] figure out key bindings and chording in use-package
+  - [X] convert all key bindings to use-package directives
+* [-] Package setup or research
+  - [ ] code constructor - create new class method
+    - order method functions
+    - order member variables
   - [ ] ef-themes
-  - [X] which-key
+  - [ ] emacs -Q?
+  - [ ] eshell - why?
+  - [ ] golden ratio?
+  - [ ] home/status page? dashboard?
+  - [ ] irony-mode?
+  - [ ] multi-compile
+  - [ ] org-mode config file
+  - [ ] repeat-mode
+  - [ ] use corfu for completions?
+  - [ ] what is the emacs module?
+  - [ ] zzz-to-char?
+  - [-] undo-tree
+    - [X] basic install
+    - [ ] undo-tree should not create turds everywhere
   - [X] ace-window
-  - [X] company-mode
-  - [X] bind \C-c r to rtags
-  - [X] make rtags work without a bunch of extra work outside of emacs
-  - [X] flycheck (flymake?)
-  - [X] smart-compile
-  - [X] eglot (decided against it for now. using lsp-mode instead.
   - [X] auto-yasnippets - might be cool some day. Defines snippets on the fly.
+  - [X] bind \C-c r to rtags
+  - [X] company-mode
   - [X] crux - buffer and file rename is the only thing I use from there
+  - [X] eglot (decided against it for now. using lsp-mode instead.
+  - [X] flycheck (flymake?)
+  - [X] make rtags work without a bunch of extra work outside of emacs
+  - [X] move-text/move-dup/drag stuff
+  - [X] prescient - for smarter sorting and filtering. can be combined with vertico.
+  - [X] smart-compile
+  - [X] which-key
+| first column                     | second col | Times | Note    |
+|----------------------------------+------------+-------+---------|
+| foobar was here and this is long | swizzle    |     1 | nothing |
+| next netry                       |            |     2 |         |
+|----------------------------------+------------+-------+---------|
