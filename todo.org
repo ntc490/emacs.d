@@ -59,8 +59,20 @@
   - [X] prescient - for smarter sorting and filtering. can be combined with vertico.
   - [X] smart-compile
   - [X] which-key
-| first column                     | second col | Times | Note    |
-|----------------------------------+------------+-------+---------|
-| foobar was here and this is long | swizzle    |     1 | nothing |
-| next netry                       |            |     2 |         |
-|----------------------------------+------------+-------+---------|
+
+* This is how to put commands in a repeat-map
+#+BEGIN_SRC elisp
+(use-package drag-stuff
+  :ensure t
+  :bind
+  (:repeat-map my-drag-stuff-map
+	       ("p" . drag-stuff-up)
+	       ("n" . drag-stuff-down))
+  :bind-keymap ("C-c n" . my-drag-stuff-map)
+;;  :bind (("M-<up>" . drag-stuff-up)
+;;	 ("M-<down>" . drag-stuff-down)
+;;	 ("M-<right>" . drag-stuff-right)
+;;	 ("M-<left>" . drag-stuff-left))
+  :init
+  (drag-stuff-global-mode 1))
+#+END_SRC
