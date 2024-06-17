@@ -29,6 +29,8 @@
 
 ;; --------------- Generic key binding ---------------
 
+(global-set-key "\M-k"   'sp-kill-sexp)
+(global-set-key "\M-\C-k" 'crux-kill-whole-line)
 (global-set-key "\M-g"   'goto-line-with-feedback)
 (global-set-key "\M-r"   'revert-buffer)
 (global-set-key "\C-ce"  'ediff-buffers)
