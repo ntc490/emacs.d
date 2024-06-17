@@ -3,15 +3,16 @@
   - [ ] remap C-c C-q to clang-format-region of defun (write custom method to do this)
   - [ ] put emacs config in an org file and add documentation?
   - [ ] rebind drag-stuff to a repeating command with longer combo
-  - [ ] rebind crux-kill-whole-line "close" to drag-stuff
+  - [X] rebind crux-kill-whole-line "close" to drag-stuff
   - [ ] bind ctrl-l to eat a token in vertico
   - [ ] ensure projectile doesn't index build directories (compile_commands.json only)
+  - [X] set default projectile build command
   - [ ] emacs instead of tmux?
   - [ ] imenu
   - [ ] repeat keys for
     - page up/down
     - drag mode stuff
-    -
+    - 
   - org mode
     - next level button? fighting indention
   - embed documentation in C/C++ code like we can embed code in org mode (plantuml or others)
@@ -23,11 +24,12 @@
     - render markdown inline
     - render plantuml inline
   - folding for C/C++
-  - foo
-  -
-  - [ ] bar
   - [X] figure out key bindings and chording in use-package
   - [X] convert all key bindings to use-package directives
+* Exercises
+  - expand region around code tokens
+  - parens around things
+  - delete thing at point
 * [-] Package setup or research
   - [ ] code constructor - create new class method
     - order method functions
