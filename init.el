@@ -20,6 +20,7 @@
 ;;(setq backup-inhibited t)
 (column-number-mode 'true)
 (setq compile-command "make -j")
+(setq projectile-project-compilation-cmd "cmake --build cbuild -j")
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq backup-by-copying t)
 
