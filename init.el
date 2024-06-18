@@ -506,7 +506,15 @@
   (global-hl-line-mode -1))
 
 (use-package dashboard
-  :ensure t)
+  :ensure t
+  :demand
+  :config
+  (setq dashboard-center-content t)
+  (setq dashboard-items '((recents   . 5)
+                          (bookmarks . 5)
+                          (projects  . 5)
+                          (agenda    . 5)))
+  (dashboard-setup-startup-hook))
 
 (use-package vterm
   :ensure nil ;; built-in
