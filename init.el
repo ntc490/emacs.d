@@ -294,6 +294,8 @@
   :chords (("uu" . undo-tree-visualize))
   :init
   (global-undo-tree-mode)
+  :config
+  (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
   :ensure t)
 
 ;; Other potentially useful commands:
