@@ -276,7 +276,7 @@
   :ensure t
   :bind (("C-c /" . company-complete))
   :config
-  (setq company-idle-delay nil
+  (setq company-idle-delay 1
 	company-minimum-prefix-length 2))
 
 (use-package flycheck
