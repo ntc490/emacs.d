@@ -347,7 +347,9 @@
   :config
   (vertico-mode)
   (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy)
-  (keymap-set vertico-map "RET" #'vertico-directory-enter))
+  :bind (:map vertico-map
+	      ("RET" . vertico-directory-enter)
+	      ("C-l" . vertico-directory-delete-word)))
 
 (use-package icomplete
   :ensure t
