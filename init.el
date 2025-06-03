@@ -54,6 +54,7 @@
 
 ;; --------------- General Setup ---------------
 
+(setq-default fill-column 80)
 (defun goto-line-with-feedback ()
   "Show line numbers temporarily, while prompting for the line number input"
   (interactive)
@@ -452,25 +453,20 @@
 (use-package cmake-mode
   :ensure t)
 
-(defun my-c-mode-common-hook ()
-  (c-set-style "BSD")
+(defun my-c-mode-hook ()
+  (lsp)
+  (setq flymake-mode nil)
   (smartparens-mode 1)
-  (whitespace-set-indention-to-spaces)
-  (setq fill-column 80))
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+  (whitespace-set-indention-to-spaces))
+(add-hook 'c-mode-hook 'my-c-mode-hook)
+(add-hook 'c-ts-mode-hook 'my-c-mode-hook)
 
 (defun my-c++-mode-hook ()
   (lsp)
-  (smartparens-mode 1))
+  (smartparens-mode 1)
+  (whitespace-set-indention-to-spaces))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
-
-(defun my-c++-ts-mode-hook ()
-  (my-c++-mode-hook))
-(add-hook 'c++-ts-mode-hook 'my-c++-ts-mode-hook)
-
-(defun my-c-mode-hook ()
-  (smartparens-mode 1))
-(add-hook 'c-mode-hook 'my-c-mode-hook)
+(add-hook 'c++-ts-mode-hook 'my-c++-mode-hook)
 
 (use-package c-ts-mode
     :ensure nil ;; emacs built-in
