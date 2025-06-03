@@ -530,6 +530,12 @@
   :config
   (remove-hook 'vterm-mode-hook 'vterm))
 
+(use-package groovy-mode
+  :ensure t)
+
+(use-package jenkinsfile-mode
+  :ensure t)
+
 ;; (use-package multi-vterm
 ;;   :commands
 ;;   multi-vterm
