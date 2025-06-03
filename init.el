@@ -40,7 +40,8 @@
 (global-set-key "\M-p"   'previous-error)
 
 ;; Code constructor module stuff - formalize some day
-(global-set-key "\C-c "  'cc-find-other-file)
+;;(global-set-key "\C-c "  'cc-find-other-file)
+(global-set-key "\C-c "  'projectile-find-other-file)
 (global-set-key "\C-ca"  'cc-append-to-line)
 (global-set-key "\C-cc"  'cc-chomp-lines)
 ;;(global-set-key "\C-cr"  'cc-chomp-lines-regexp)
