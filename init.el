@@ -6,6 +6,7 @@
 ;; --------------- Power User Stuff ---------------
 
 (setq inhibit-startup-message t)
+(setq split-height-threshold nil)
 (put 'set-goal-column 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
