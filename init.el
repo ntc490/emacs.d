@@ -72,6 +72,12 @@
         (goto-line (read-number "Goto line: ")))
     (display-line-numbers-mode -1)))
 
+;; Improvements for markdown rendering
+(setq markdown-hide-markup t)
+(setq markdown-fontify-code-blocks-natively t)
+(setq markdown-enable-math t)
+(add-hook 'markdown-mode-hook #'visual-line-mode)
+
 ;; Resizing the Emacs frame can be a terribly expensive part of changing the
 ;; font. By inhibiting this, we easily halve startup times with fonts that are
 ;; larger than the system default.
