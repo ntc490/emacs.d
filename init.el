@@ -219,7 +219,10 @@
 (put 'projectile-project-compilation-cmd 'safe-local-variable #'stringp)
 (use-package projectile
   :ensure t
-  :bind-keymap ("C-c p" . projectile-command-map))
+  :demand t
+  :bind-keymap ("C-c p" . projectile-command-map)
+  :config
+  (projectile-mode +1))
 
 (use-package swiper
   :ensure t
@@ -490,6 +493,7 @@
   :demand
   :config
   (setq dashboard-center-content t)
+  (setq dashboard-projects-backend 'projectile)
   (setq dashboard-items '((recents   . 5)
                           (bookmarks . 5)
                           (projects  . 5)
