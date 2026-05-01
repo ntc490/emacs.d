@@ -29,6 +29,12 @@
 ;; --------------- Theme ---------------
 
 (load-theme 'wombat t)
+(defun nc/disable-bg-in-terminal (&optional frame)
+  (unless (display-graphic-p frame)
+    (set-face-background 'default "unspecified-bg" frame)))
+
+(add-hook 'after-make-frame-functions 'nc/disable-bg-in-terminal)
+(add-hook 'window-setup-hook 'nc/disable-bg-in-terminal)
 
 ;; --------------- Generic key binding ---------------
 
